@@ -32,7 +32,15 @@ colnames(av)[colnames(av) == 'n.x'] <- 'timesDied'
 colnames(av)[colnames(av) == 'returned'] <- 'return'
 colnames(av)[colnames(av) == 'n.y'] <- 'timesReturned'
 ```
+Part 2 
 
+The author claims that at least 69 avengers have died once
+
+This code proves that that is the case: 
+
+```{R}
+av %>% filter(death == "YES") %>% count(death)
+```
 Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
 
 When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
