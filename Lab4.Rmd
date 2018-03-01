@@ -2,6 +2,7 @@
 title: "Lab 4"
 Author: Ian Cornish Megan Carpenter Omar Taylor Ross Ellingboe
 output: html_notebook
+url: https://github.com/carpenter0/lab-4
 ---
 
 This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
