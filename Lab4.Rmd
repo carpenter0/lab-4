@@ -20,6 +20,12 @@ Grouping data
 ?parse_number
 Deaths <- av %>% gather(Death, died, Death1, Death2, Death3, Death4, Death5) 
 Returns <- av %>% gather(Return, returned, Return1, Return2, Return3, Return4, Return5)
+
+deathFreq <- Deaths %>% group_by(URL) %>% filter(died == "YES") %>% count(died)
+av <- merge(av, deathFreq, by ="URL", all = TRUE)
+
+returnFreq <- Returns %>% group_by(URL) %>% filter(returned == "YES") %>% count(returned)
+av <- merge(av, returnFreq, by = "URL", all = TRUE)
 ```
 
 Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
