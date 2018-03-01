@@ -26,6 +26,11 @@ av <- merge(av, deathFreq, by ="URL", all = TRUE)
 
 returnFreq <- Returns %>% group_by(URL) %>% filter(returned == "YES") %>% count(returned)
 av <- merge(av, returnFreq, by = "URL", all = TRUE)
+
+colnames(av)[colnames(av) == 'died'] <- 'death'
+colnames(av)[colnames(av) == 'n.x'] <- 'timesDied'
+colnames(av)[colnames(av) == 'returned'] <- 'return'
+colnames(av)[colnames(av) == 'n.y'] <- 'timesReturned'
 ```
 
 Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
