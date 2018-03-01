@@ -1,6 +1,6 @@
 ---
 title: "Lab 4"
-Author: Ian Cornish
+Author: Ian Cornish Megan Carpenter Omar Taylor Ross Ellingboe
 output: html_notebook
 ---
 
